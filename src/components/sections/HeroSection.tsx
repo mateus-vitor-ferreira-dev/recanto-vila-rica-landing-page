@@ -16,7 +16,7 @@ export default function HeroSection() {
         className="mx-auto max-w-4xl"
       >
         <span className="inline-block rounded-full border border-gold/30 bg-gold/10 px-4 py-1 text-sm font-medium text-gold">
-          Espaço premium para festas e eventos
+          Recanto Vila Rica - Festas e Eventos
         </span>
 
         <motion.h1
@@ -36,9 +36,9 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.12 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-600 dark:text-zinc-400 md:text-lg"
         >
-          O Recanto Vila Rica é o espaço ideal para aniversários,
-          confraternizações e celebrações inesquecíveis, com uma atmosfera
-          elegante, alegre e preparada para receber seus convidados com estilo.
+          O espaço ideal para festas de aniversário, casamentos, formaturas,
+          confraternizações e outros eventos. Onde seus momentos especiais serão
+          inexquecíveis!
         </motion.p>
 
         <motion.div
