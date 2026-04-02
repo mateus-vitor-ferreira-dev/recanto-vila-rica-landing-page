@@ -1,11 +1,7 @@
+import instagram from "@/assets/icons/instagram.svg";
+import whatsapp from "@/assets/icons/whatsapp.svg";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Camera,
-  CheckCircle2,
-  MessageCircle,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -74,7 +70,7 @@ export default function CTASection() {
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex gap-4">
                         <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-black/10">
-                          <MessageCircle className="h-7 w-7" />
+                          <img src={whatsapp} className="h-7 w-7" />
                         </div>
 
                         <div>
@@ -100,7 +96,7 @@ export default function CTASection() {
                       className="group rounded-[1.75rem] border border-zinc-200 bg-zinc-50 p-5 transition hover:border-gold/40 hover:bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800"
                     >
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm dark:bg-zinc-800">
-                        <Camera className="h-6 w-6 text-gold" />
+                        <img src={instagram} className="h-6 w-6 text-gold" />
                       </div>
 
                       <p className="mt-4 font-semibold text-zinc-900 dark:text-white">
