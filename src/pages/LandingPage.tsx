@@ -1,5 +1,6 @@
 import BudgetSection from "../components/sections/BudgetSection";
 import CTASection from "../components/sections/CTASection";
+import Footer from "../components/sections/Footer";
 import HeroSection from "../components/sections/HeroSection";
 import LocationSection from "../components/sections/LocationSection";
 import PricingSection from "../components/sections/PricingSection";
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <LocationSection />
       <BudgetSection />
       <CTASection />
+      <Footer />
     </main>
   );
 }
