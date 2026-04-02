@@ -17,7 +17,7 @@ export default function PricingSection() {
       date: "Sex-dom e feriados",
       name: "Essencial",
       tagline: "Garanta sua data",
-      price: "R$850,00",
+      price: "R$849,99",
       extras: ["4h de festa", "Área kids com monitor INCLUSO"],
     },
     {
