@@ -18,11 +18,12 @@ export default function HeroSection() {
 
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
 
-      tl.fromTo(badgeRef.current, { opacity: 0, y: 20, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.7 })
-        .fromTo(headlineRef.current, { opacity: 0, y: 30, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8 }, '-=0.4')
-        .fromTo(subRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
-        .fromTo(ctaRef.current, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
-        .fromTo(socialRef.current, { opacity: 0 }, { opacity: 1, duration: 0.5 }, '-=0.2')
+      // elementos já começam opacity:0 via className — GSAP só anima para o estado final
+      tl.to(badgeRef.current, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, delay: 0.2 })
+        .to(headlineRef.current, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9 }, '-=0.5')
+        .to(subRef.current, { opacity: 1, y: 0, duration: 0.7 }, '-=0.55')
+        .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.6 }, '-=0.45')
+        .to(socialRef.current, { opacity: 1, y: 0, duration: 0.5 }, '-=0.3')
     }
     init()
   }, [])
@@ -53,7 +54,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#F8F4EE] to-transparent" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 pt-28 pb-20 text-center">
-        <div ref={badgeRef} className="mb-8">
+        <div ref={badgeRef} className="mb-8 opacity-0 translate-y-5" style={{ filter: 'blur(8px)' }}>
           <Badge className="text-[#C6A15B] border-[#C6A15B]/40 bg-[#C6A15B]/10">
             ✦ Recanto Vila Rica · Festas &amp; Eventos · Lavras, MG
           </Badge>
@@ -61,7 +62,8 @@ export default function HeroSection() {
 
         <h1
           ref={headlineRef}
-          className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-7"
+          className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-7 opacity-0 translate-y-8"
+          style={{ filter: 'blur(6px)' }}
         >
           Celebre momentos{' '}
           <span
@@ -77,13 +79,13 @@ export default function HeroSection() {
 
         <p
           ref={subRef}
-          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-10"
+          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-10 opacity-0 translate-y-5"
         >
           O espaço ideal para aniversários, casamentos, formaturas e confraternizações.
           Um ambiente pensado para transformar celebrações em memórias inesquecíveis.
         </p>
 
-        <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 opacity-0 translate-y-5">
           <a
             href="https://wa.me/5535999718824"
             target="_blank"
@@ -102,7 +104,7 @@ export default function HeroSection() {
         </div>
 
         {/* Social proof */}
-        <div ref={socialRef} className="flex items-center justify-center gap-6 text-white/40 text-sm">
+        <div ref={socialRef} className="flex items-center justify-center gap-6 text-white/40 text-sm opacity-0 translate-y-3">
           <div className="flex items-center gap-1.5">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
