@@ -1,22 +1,90 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+const siteUrl = 'https://recanto-vila-rica-landing.vercel.app'
+
 export const metadata: Metadata = {
   title: 'Recanto Vila Rica — Espaço para Eventos em Lavras, MG',
   description:
-    'O espaço ideal para aniversários, casamentos, formaturas e confraternizações. Conforto, sofisticação e acolhimento em Lavras, MG.',
+    'O espaço ideal para aniversários, casamentos, formaturas e confraternizações em Lavras, MG. Reserve pelo WhatsApp: (35) 99971-8824.',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
+  keywords: [
+    'espaço para eventos Lavras',
+    'salão de festas Lavras MG',
+    'aniversário Lavras',
+    'casamento Lavras',
+    'formatura Lavras',
+    'Recanto Vila Rica',
+    'aluguel de espaço para festa Lavras',
+  ],
   openGraph: {
-    title: 'Recanto Vila Rica',
-    description: 'Celebre momentos especiais com sofisticação e acolhimento.',
+    title: 'Recanto Vila Rica — Espaço para Eventos em Lavras, MG',
+    description:
+      'Celebre momentos especiais com sofisticação e acolhimento. Aniversários, casamentos, formaturas e mais. Reserve agora pelo WhatsApp.',
+    url: siteUrl,
+    siteName: 'Recanto Vila Rica',
     locale: 'pt_BR',
     type: 'website',
+    images: [
+      {
+        url: '/assets/salao.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Salão principal do Recanto Vila Rica em Lavras, MG',
+      },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Recanto Vila Rica — Espaço para Eventos em Lavras, MG',
+    description: 'Celebre momentos especiais com sofisticação e acolhimento em Lavras, MG.',
+    images: ['/assets/salao.jpeg'],
+  },
+  robots: { index: true, follow: true },
+}
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EventVenue',
+  name: 'Recanto Vila Rica',
+  description:
+    'Espaço para eventos em Lavras, MG. Ideal para aniversários, casamentos, formaturas e confraternizações.',
+  url: siteUrl,
+  telephone: '+55-35-99971-8824',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Rua Bernardino Antônio Tomás, 21',
+    addressLocality: 'Lavras',
+    addressRegion: 'MG',
+    postalCode: '37203-775',
+    addressCountry: 'BR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -21.2445,
+    longitude: -44.9997,
+  },
+  sameAs: ['https://instagram.com/recanto.vilarica'],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '08:00',
+    closes: '23:00',
+  },
+  priceRange: 'R$649 - R$999',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
