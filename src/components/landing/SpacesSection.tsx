@@ -7,11 +7,11 @@ import { Badge } from '@/components/ui/badge'
 import { useScrollAnimation } from '@/lib/useScrollAnimation'
 
 const spaces = [
-  { id: 'salao', label: 'Salão principal', src: '/assets/salao.jpeg', description: 'Ambiente amplo e versátil, ideal para festas, confraternizações e eventos especiais com toda a estrutura necessária.' },
-  { id: 'espaco', label: 'Espaço de festa', src: '/assets/espaco-de-festa.jpeg', description: 'Área preparada para decoração personalizada e momentos inesquecíveis com seus convidados.' },
-  { id: 'kids', label: 'Área kids', src: '/assets/area-kids.jpeg', description: 'Espaço dedicado para as crianças se divertirem com segurança e monitor incluso.' },
-  { id: 'piscina', label: 'Piscina', src: '/assets/piscina.jpeg', description: 'Perfeita para dias quentes e eventos mais descontraídos, agregando ainda mais valor à celebração.' },
-  { id: 'entrada', label: 'Entrada', src: '/assets/entrada.jpeg', description: 'Um acesso organizado e acolhedor para receber seus convidados com conforto desde o primeiro momento.' },
+  { id: 'salao', label: 'Salão principal', src: '/assets/salao.webp', description: 'Ambiente amplo e versátil, ideal para festas, confraternizações e eventos especiais com toda a estrutura necessária.' },
+  { id: 'espaco', label: 'Espaço de festa', src: '/assets/espaco-de-festa.webp', description: 'Área preparada para decoração personalizada e momentos inesquecíveis com seus convidados.' },
+  { id: 'kids', label: 'Área kids', src: '/assets/area-kids.webp', description: 'Espaço dedicado para as crianças se divertirem com segurança e monitor incluso.' },
+  { id: 'piscina', label: 'Piscina', src: '/assets/piscina.webp', description: 'Perfeita para dias quentes e eventos mais descontraídos, agregando ainda mais valor à celebração.' },
+  { id: 'entrada', label: 'Entrada', src: '/assets/entrada.webp', description: 'Um acesso organizado e acolhedor para receber seus convidados com conforto desde o primeiro momento.' },
 ]
 
 export default function SpacesSection() {

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/salao.jpeg',
+        url: '/assets/salao.webp',
         width: 1200,
         height: 630,
         alt: 'Salão principal do Recanto Vila Rica em Lavras, MG',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Recanto Vila Rica — Espaço para Eventos em Lavras, MG',
     description: 'Celebre momentos especiais com sofisticação e acolhimento em Lavras, MG.',
-    images: ['/assets/salao.jpeg'],
+    images: ['/assets/salao.webp'],
   },
   robots: { index: true, follow: true },
 }
@@ -78,6 +78,17 @@ const localBusinessSchema = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Preload da imagem LCP — primeira imagem visível da galeria */}
+        <link
+          rel="preload"
+          as="image"
+          href="/assets/salao.webp"
+          type="image/webp"
+        />
+        {/* Preload da logo SVG */}
+        <link rel="preload" as="image" href="/logo-recanto.svg" type="image/svg+xml" />
+      </head>
       <body>
         <script
           type="application/ld+json"
