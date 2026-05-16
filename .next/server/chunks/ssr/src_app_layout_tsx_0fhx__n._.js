@@ -1,3 +1,0 @@
-module.exports=[27572,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function({children:a}){return(0,b.jsx)("html",{lang:"pt-BR",children:(0,b.jsx)("body",{children:a})})},"metadata",0,{title:"Recanto Vila Rica — Espaço para Eventos em Lavras, MG",description:"O espaço ideal para aniversários, casamentos, formaturas e confraternizações. Conforto, sofisticação e acolhimento em Lavras, MG.",openGraph:{title:"Recanto Vila Rica",description:"Celebre momentos especiais com sofisticação e acolhimento.",locale:"pt_BR",type:"website"}}])},50645,a=>{a.n(a.i(27572))}];
-
-//# sourceMappingURL=src_app_layout_tsx_0fhx__n._.js.map
